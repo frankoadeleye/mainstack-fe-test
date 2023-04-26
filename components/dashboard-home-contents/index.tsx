@@ -12,12 +12,9 @@ import {
   TopReferralSourceRCData,
 } from "utils/data/report-card";
 import { DBTimeGraph, DBTimeGrapHeader } from "components/dashboard-time-graph";
-import UseAnalytics from "hooks/useAnalytics";
 
 function DashboardHomeContents() {
   const [selected, setSelected] = useState("All Time");
-  const {  topLocations,
-    topRefSource, isLoading } = UseAnalytics();
 
   return (
     <DashboardLayout
@@ -31,18 +28,16 @@ function DashboardHomeContents() {
         />
         <DBTimeGrapHeader />
         <DBTimeGraph />
-        {!isLoading  && (
-          <DBHChartsWrap>
-            <ReportCard
-              enteries={topLocations}
-              title="Top Locations"
-            />
-            <ReportCard
-              enteries={topRefSource}
-              title="Top Referral Source"
-            />
-          </DBHChartsWrap>
-        )}
+        <DBHChartsWrap>
+          <ReportCard
+            enteries={LocationRCData.dataEnteries}
+            title={LocationRCData.title}
+          />
+          <ReportCard
+            enteries={TopReferralSourceRCData.dataEnteries}
+            title={TopReferralSourceRCData.title}
+          />
+        </DBHChartsWrap>
       </DBHContentsBlock>
     </DashboardLayout>
   );
