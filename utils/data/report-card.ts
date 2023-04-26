@@ -81,4 +81,32 @@ const TopReferralSourceRCData = {
   ],
 };
 
-export { LocationRCData, TopReferralSourceRCData };
+const SupplementaryData = [
+  {
+    name: "Nigeria",
+    icon: NigeriaLogo,
+    fill: "#599EEA",
+  },
+
+  {
+    icon: USALogo,
+    name: "United States",
+    fill: "#844FF6",
+  },
+  {
+    icon: Netherlands,
+    name: "Netherlands",
+    fill: "#0FB77A",
+  },
+  {
+    icon: Andorra,
+    name: "Andorra",
+    fill: "#FAB70A",
+  },
+  {
+    name: "Others",
+    fill: "#F09468",
+  },
+];
+
+export { LocationRCData, SupplementaryData, TopReferralSourceRCData };

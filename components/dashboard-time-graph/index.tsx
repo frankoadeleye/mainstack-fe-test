@@ -14,7 +14,7 @@ import { DBTGHeaderBlock } from "styles/components/graph";
 import { timeGraphData } from "utils/data/time-graph";
 import Images from "assets/images";
 
-const {info} = Images;
+const { info } = Images;
 
 function DBTimeGraph() {
   return (
@@ -60,7 +60,7 @@ const DBTimeGrapHeader = () => {
       </div>
       <div className="bottom">All time</div>
       <div className="view">500</div>
-      <br/>
+      <br />
     </DBTGHeaderBlock>
   );
 };

@@ -15,21 +15,22 @@ import {
 type RCDEprops = {
   data: {
     icon: HTMLImageElement;
-    name: string;
-    percentage: string | number;
+    country: string;
+    percent: string | number;
     fill: string;
+    source: string;
   };
 };
 
 const RCDataElement = ({ data }: RCDEprops) => {
-  const { icon, name, percentage, fill } = data;
+  const { icon, country, source, percent, fill } = data;
   return (
     <RCDataElementBlock>
       <RCDataImgWrap>
         {icon && <ImageWrapper src={icon} width={21} height={15} alt="Logo" />}
       </RCDataImgWrap>
       <RCDEText>
-        {name} {percentage}% <RCDEDot bgColor={fill} />
+        {country || source} {percent}% <RCDEDot bgColor={fill} />
       </RCDEText>
     </RCDataElementBlock>
   );
